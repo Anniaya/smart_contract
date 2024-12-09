@@ -1,0 +1,226 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "contrepartie",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "limiteExposition",
+						"type": "uint256"
+					}
+				],
+				"name": "ContrepartieAjoutee",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "contrepartie",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "nouvelleExposition",
+						"type": "uint256"
+					}
+				],
+				"name": "ExpositionMiseAJour",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "contrepartie",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "exposition",
+						"type": "uint256"
+					}
+				],
+				"name": "LimiteDepassee",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_portefeuille",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_scoreCredit",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_limiteExposition",
+						"type": "uint256"
+					}
+				],
+				"name": "ajouterContrepartie",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_portefeuille",
+						"type": "address"
+					}
+				],
+				"name": "calculerRisque",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "contreparties",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "portefeuille",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "scoreCredit",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "limiteExposition",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "expositionCourante",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "estActif",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "expositions",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_portefeuille",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_nouvelleExposition",
+						"type": "uint256"
+					}
+				],
+				"name": "mettreAJourExposition",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Smartcontract.sol": "GestionnaireRisqueContrepartie"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Smartcontract.sol": {
+			"keccak256": "0xd043e3371ace3ca2e63de7ee99a3da9c891e968e9d0907d598b60ddc3cdd23a4",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://94969832162672a34562daa8c2fca3c1a2d640a33caeb9400518ec4c11adaa24",
+				"dweb:/ipfs/QmPAVS1c27EmzW1uycEqeKo6ZM9bSgpnzuJBSie2eK7KH3"
+			]
+		}
+	},
+	"version": 1
+}
